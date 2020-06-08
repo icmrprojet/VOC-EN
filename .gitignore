@@ -1,98 +1,78 @@
-# Created by https://www.gitignore.io/api/linux,macos,windows,sublimetext
+# Lines starting with `#` are comments.
 
-### Linux ###
-*~
+# Ignore files called 'file.ext'
+file.ext
 
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
+# Comments can't be on the same line as rules!
+# The following line ignores files called 'file.ext # not a comment'
+file.ext # not a comment 
 
-# KDE directory preferences
-.directory
+# Ignoring files with full path.
+# This matches files in the root directory and subdirectories too.
+# i.e. otherfile.ext will be ignored anywhere on the tree.
+dir/otherdir/file.ext
+otherfile.ext
 
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
+# Ignoring directories
+# Both the directory itself and its contents will be ignored.
+bin/
+gen/
+xls/
+json/
 
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
+# Glob pattern can also be used here to ignore paths with certain characters.
+# For example, the below rule will match both build/ and Build/
+[bB]uild/
 
-### macOS ###
-*.DS_Store
-.AppleDouble
-.LSOverride
+# Without the trailing slash, the rule will match a file and/or
+# a directory, so the following would ignore both a file named `gen`
+# and a directory named `gen`, as well as any contents of that directory
+bin
+gen
 
-# Icon must end with two \r
-Icon
+# Ignoring files by extension
+# All files with these extensions will be ignored in
+# this directory and all its sub-directories.
+*.apk
+*.class
 
-# Thumbnails
-._*
+# It's possible to combine both forms to ignore files with certain
+# extensions in certain directories. The following rules would be
+# redundant with generic rules defined above.
+java/*.apk
+gen/*.class
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
+# To ignore files only at the top level directory, but not in its
+# subdirectories, prefix the rule with a `/`
+/*.apk
+/*.class
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# To ignore any directories named DirectoryA 
+# in any depth use ** before DirectoryA
+# Do not forget the last /, 
+# Otherwise it will ignore all files named DirectoryA, rather than directories
+**/DirectoryA/
+# This would ignore 
+# DirectoryA/
+# DirectoryB/DirectoryA/ 
+# DirectoryC/DirectoryB/DirectoryA/
+# It would not ignore a file named DirectoryA, at any level
 
-### SublimeText ###
-# cache files for sublime text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
+# To ignore any directory named DirectoryB within a 
+# directory named DirectoryA with any number of 
+# directories in between, use ** between the directories
+DirectoryA/**/DirectoryB/
+# This would ignore 
+# DirectoryA/DirectoryB/ 
+# DirectoryA/DirectoryQ/DirectoryB/ 
+# DirectoryA/DirectoryQ/DirectoryW/DirectoryB/
 
-# workspace files are user-specific
-*.sublime-workspace
+# To ignore a set of files, wildcards can be used, as can be seen above.
+# A sole '*' will ignore everything in your folder, including your .gitignore file.
+# To exclude specific files when using wildcards, negate them.
+# So they are excluded from the ignore list:
+!.gitignore 
 
-# project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using SublimeText
-# *.sublime-project
-
-# sftp configuration file
-sftp-config.json
-
-# Package control specific files
-Package Control.last-run
-Package Control.ca-list
-Package Control.ca-bundle
-Package Control.system-ca-bundle
-Package Control.cache/
-Package Control.ca-certs/
-Package Control.merged-ca-bundle
-Package Control.user-ca-bundle
-oscrypto-ca-bundle.crt
-bh_unicode_properties.cache
-
-# Sublime-github package stores a github token in this file
-# https://packagecontrol.io/packages/sublime-github
-GitHub.sublime-settings
-
-### Windows ###
-# Windows thumbnail cache files
-Thumbs.db
-ehthumbs.db
-ehthumbs_vista.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# End of https://www.gitignore.io/api/linux,macos,windows,sublimetext
+# Use the backslash as escape character to ignore files with a hash (#)
+# (supported since 1.6.2.1)
+\#*#
