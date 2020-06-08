@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117251281-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117251281-1');
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/voc.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Luckiest+Guy&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>WHAT THAT MEANS</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="headerTitle" class="headerTitle">VOCABULARY AND GRAMMAR TESTS<BR> ...</h1>
+        <H2 id="titre" style="display:none"></H2>
+        <div id="navChoixFilter" style="display:none">
+            <ul>
+                <li class="chx" id="All">All</li>
+                <li class="chx" id="5">5</li>
+                <li class="chx" id="7">7</li>
+                <li class="chx" id="10">10</li>
+            </ul>
+            <span id="nbQuestion"></span>
+        </div>
+        <div class="ref">
+            <ul>
+                <li id="newTest" class="btnNav rose" style="display:none" title="Dowload a new test"><i class="fas fa-cloud-download-alt"></i></li>
+                <li id="totaux" class="btnNav"></li>
+                <li id="refresh" class="btnNav rose" style="display:none" title="Shuffle and Clear"><i class="fas fa-sync-alt"></i></li>
+            </ul>
+        </div>
+        <div class="nav" id="menuOpen">
+            <div id="menu" class="sidenav">
+                <button class=" opt dropdown-btn">VOCABULARY<i class="fa fa-caret-down"></i></button>
+                  <div class="dropdown-container">
+                    <a class="opt item" id="voc01" title="Enter the right false-friend word (34)">FALSE-FRIENDS (34)</a>
+                    <a class="opt item" id="voc02" title="Enter the missing word about CINEMA (10)">CINEMA (10)</a>
+                    <a class="opt item" id="voc03" title="Enter the missing word about CLICHÉS (10)">CLICHÉS (10)</a>
+                    <a class="opt item" id="voc04" title="Enter the missing word about MISTAKE (10)">MISTAKE (10)</a>
+                    <span class="sep">ABOUT LIFE :</span>
+                    <a class="opt item" id="voc05" title="Enter the missing word about STATION (10)">AT THE STATION (10)</a>
+                    <a class="opt item" id="voc06" title="Enter the missing word about SUPERMARKET (10)">AT THE SUPERMARKET (10)</a>
+                    <a class="opt item" id="voc07" title="Enter the missing word about THEATRE (10)">AT THE THEATRE (10)</a>
+         <!--TODO--><a class="opt item" id="voc18" title="Enter the missing word about SHOPS (10)">AT THE SHOPS (10)</a>
+                    <a class="opt item" id="voc19" title="Enter the missing word about OFFICE (20)">AT THE OFFICE (20)</a>
+                    <a class="opt item" id="voc19" title="Enter the missing word about PRACTICE (10)">CODE TO PRACTICE (10)</a>
+                    <a class="opt item" id="voc08" title="Enter the missing word about BROADCAST (10)">THE BROADCAST (10)</a>
+                    <a class="opt item" id="voc09" title="Enter the missing word about BILL (10)">THE BILL (10)</a>
+                    <a class="opt item" id="voc10" title="Enter the missing word about ACCOUNTS (10)">THE ACCOUNTS (10)</a>
+                    <a class="opt item" id="voc11" title="Enter the missing word about ADVERTISING (10)">ADVERTISING (10)</a>
+                    <a class="opt item" id="voc12" title="Enter the missing word about AGREEMENTS (10)">AGREEMENTS (10)</a>
+                    <span class="sep">ABOUT JOB :</span>
+                    <a class="opt item" id="voc13" title="Enter the missing word about JOB (10)">APPLY FOR THAT JOB (10)</a>
+                    <a class="opt item" id="voc15" title="Enter the missing word about COMPUTERS (20)">AT THE COMPUTER (20)</a>
+                    <a class="opt item" id="voc16" title="Enter the missing word about INTERVIEW (10)">INTERVIEWS AND JOBS (20)</a>
+                    <a class="opt item" id="voc17" title="Enter the missing word about INTERVIEW (10)">EMPLOYMENT AND TRAINING (10)</a>
+                    <span class="sep">ABOUT BUSINESS :</span>
+                    <a class="opt item" id="voc18" title="Enter the missing word about BUSINESS (10)">BUSINESS (30)</a>
+                    <a class="opt item" id="voc34" title="Enter the missing word about BUSINESS (10)">INTERNET BUSINESS (20)</a>
+                    <a class="opt item" id="voc43" title="Enter the missing word about MARKETING (10)">ONLINE MARKETING CAMPAIGN (10)</a>                    
+                    <span class="sep">ABOUT SECURITY :</span>
+                    <a class="opt item" id="voc33" title="Enter the missing word about POLICY (10)">INSURANCE POLICY (10)</a>
+                    <a class="opt item" id="voc21" title="Enter the missing word about CREDIT CARD (10)">CREDIT CARD HOLDERS (10)</a>
+                    <a class="opt item" id="voc22" title="Enter the missing word about EMPLOYEMENT (10)">EMPLOYEMENT AND TRAINING (10)</a>
+                    <a class="opt item" id="voc23" title="Enter the missing word about FINANCE (10)">FINANCE (40)</a>
+                    <a class="opt item" id="voc24" title="Enter the missing word about GARANTEES (10)">GARANTEES AND WARRANTIES (10)</a>
+           <!--OK--><a class="opt item" id="voc14" title="Enter the missing word about DEBT (10)">ARE YOU DEBT? (10)</a>
+                    <a class="opt item" id="voc36" title="Enter the missing word about INVOICES (10)">INVOICES (10)</a>
+                    <a class="opt item" id="voc38" title="Enter the missing word about LEGAL (10)">LEGAL EXPRESSIONS (10)</a>
+                    <a class="opt item" id="voc40" title="Enter the missing word about COMPLAINT (10)">LETTER OF COMPLAINT (40)</a>
+                    <a class="opt item" id="voc41" title="Enter the missing word about MONEY (10)">MONEY (50)</a>
+                    <a class="opt item" id="voc42" title="Enter the missing word about MONEY (10)">MONEY SLANG EXPRESSIONS (10)</a>
+                    <span class="sep">ABOUT HOW TO :</span>
+                    <a class="opt item" id="voc25" title="Enter the missing word about AGREE (10)">HOW TO AGREE (10)</a>
+                    <a class="opt item" id="voc26" title="Enter the missing word about APOLOGIZE (10)">HOW TO APOLOGIZE (10)</a>
+                    <a class="opt item" id="voc27" title="Enter the missing word about THE WAY (10)">HOW TO ASK THE WAY (10)</a>
+                    <a class="opt item" id="voc28" title="Enter the missing word about COMPLAIN (10)">HOW TO COMPLAIN (10)</a>
+                    <a class="opt item" id="voc29" title="Enter the missing word about CRITICIZE (10)">HOW TO CRITICIZE (10)</a>
+                    <a class="opt item" id="voc30" title="Enter the missing word about DISAGREE (10)">HOW TO DISAGREE (10)</a>
+                    <a class="opt item" id="voc31" title="Enter the missing word about ENCOURAGE (10)">HOW TO ENCOURAGE (10)</a>
+                    <a class="opt item" id="voc32" title="Enter the missing word about EXCLAMATIONS (10)">HOW TO MAKE EXCLAMATIONS (10)</a>
+                    
+                    
+
+                    
+                  </div>
+                <button class=" opt dropdown-btn">GRAMMAR<i class="fa fa-caret-down"></i></button>
+                  <div class="dropdown-container">
+                    <a class="opt item" id="voc101" title="Enter a verb requiring the infinitive (37)">Verb + Inf. (37)</a>
+                    <a class="opt item" id="voc102" title="Enter a verb requiring the gerund (28)">Verb + Ger. (28)</a>
+                </div>
+                <button class=" opt dropdown-btn">ROOT FAMILY<i class="fa fa-caret-down"></i></button>
+                  <div class="dropdown-container">
+                    <a class="opt item" id="voc201" title="Enter bear + ( . . . ) (10)">BEAR family (10)</a>
+                    <!--a class="opt item" id="voc21">Link</a>
+                    <a class="opt item" id="voc22">Link</a-->
+                </div>
+                <button class=" opt dropdown-btn">EXERCICES<i class="fa fa-caret-down"></i></button>
+                  <div class="dropdown-container">
+                    <a class="opt item" id="voc301" title="Enter the specified verb either ing or Infinitive (65)">Gerund (ing) or infinitive ? (65)</a>
+                    <!--a class="opt item" id="voc31">Link</a>
+                    <a class="opt item" id="voc32">Link</a-->
+                </div>
+                <!--a class="opt item" id="voc40">THEMATIQUES</a>
+                <a class="opt item" id="voc50">ADVERBES</a-->
+                <span class="byFile">
+                    <input type="file" id="myFile" name="filename" class="opt">
+                </span>
+            </div>
+        </div>
+
+    </header>
+    <div id="possible"></div>
+    <div id="content">
+    </div>
+    <div id="congrat" style="display:none">
+        <h2><span id="congraText"></span></h2>
+        <span><img id="congratImg"></span>
+    </div>
+    <div id="finalText" class="finalText" style="display:none"></div>
+    <div id="message" style="display:none"></div>
+    <div id="bottomTools">
+        <span id="top" class="btnTools">&#8593;</span>
+        <span id="guide" class="btnTools"><i class="fas fa-question-circle"></i></span>
+    </div>
+
+    <!--form name="fichier" id="fichier">
+        <select id="selection" name="sel" class="opt" >
+            <option class="opt" selected>Liste de tests disponibles</option>
+            <option class="opt" value="voc01.json">Vocabulaire (10)</option>
+            <option class="opt" value="voc02.json">Faux Amis (30)</option>
+            <option class="opt" value="voc03.json">Verbe + Infinitif (20)</option>
+            <option class="opt" value="voc04.json">Verbes + Gérondif (20)</option>
+        </select>
+    </form-->
+    <script type="text/javascript" src="vocserveur.js"></script>
+    <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            let item = (this.innerHTML).split("<");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                this.innerHTML=item[0] + "<i class=\"fa fa-caret-down\"></i>";
+                this.classList.remove("menuColorOpen");
+                this.setAttribute("style","width:90%");
+
+            } else {
+                dropdownContent.style.display = "block";
+                this.innerHTML=item[0] + "<i class=\"fa fa-chevron-circle-up\"></i>";
+                this.classList.add("menuColorOpen");
+                this.setAttribute("style","width:80%");
+                this.setAttribute("style","margin-left:0");
+
+            }
+        });
+    }
+    </script>
+</body>
+</html>
